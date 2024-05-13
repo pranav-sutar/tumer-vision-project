@@ -1,7 +1,7 @@
 import streamlit as st
 import tensorflow as tf
 import numpy as np
-import os
+# import os
 
 # Tensorflow model prediction
 model = tf.keras.models.load_model('./trained_manoj.h5')
@@ -68,7 +68,7 @@ else:
    # Detection
    if st.button("Predict"):
       st.write("Prediction: ")
-      st.write(os.path.isfile("./trained_manoj.h5"))
+    #   st.write(os.path.isfile("./trained_manoj.h5"))
       result_index = model_prediction(test_image)
       class_name = ['glioma tumor', 'meningioma tumor', 'no tumor', 'pituitary tumor']
       st.write("Predicted result is: ")
